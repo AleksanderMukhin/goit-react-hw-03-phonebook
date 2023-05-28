@@ -77,10 +77,12 @@ export class App extends Component {
           value={this.state.filter}
           handleFilterChange={this.handleFilterChange}
         />
-        <ContactList
-          contactList={this.handleFilterContact}
-          handelDelet={this.handelDelet}
-        />
+        {this.state.contacts && (
+          <ContactList
+            contactList={this.handleFilterContact}
+            handelDelet={this.handelDelet}
+          />
+        )}
       </div>
     );
   }
