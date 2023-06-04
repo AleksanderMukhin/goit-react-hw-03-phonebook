@@ -3,7 +3,6 @@ import { Filter } from './Filter/Filter';
 import { nanoid } from 'nanoid';
 import { ContactList } from './ContactList/ContactList';
 const { Component } = require('react');
-const KEY_LOCAL_CONTACTS = 'cotacts';
 
 export class App extends Component {
   state = {
