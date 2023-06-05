@@ -16,15 +16,15 @@ export class App extends Component {
     filter: '',
   };
 
-  componentDidMount() {
-    this.setState({ contacts: JSON.parse(localStorage.getItem('contacts')) });
-  }
+  // componentDidMount() {
+  //   this.setState({ contacts: JSON.parse(localStorage.getItem('contacts')) });
+  // }
 
-  componentDidUpdate(_, prevState) {
-    if (this.state.contacts.length !== prevState.contacts.length) {
-      localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
-    }
-  }
+  // componentDidUpdate(_, prevState) {
+  //   if (this.state.contacts.length !== prevState.contacts.length) {
+  //     localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
+  //   }
+  // }
 
   handleSubmitForm = contact => {
     return this.state.contacts.some(cont => {
