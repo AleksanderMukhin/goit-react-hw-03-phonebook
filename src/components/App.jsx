@@ -2,7 +2,7 @@ import ContactForm from './ContactForm/ContactForm';
 import { Filter } from './Filter/Filter';
 import { nanoid } from 'nanoid';
 import { ContactList } from './ContactList/ContactList';
-const { Component } = require('react');
+import { Component } from 'react';
 
 export class App extends Component {
   state = {
