@@ -20,6 +20,6 @@ export const ContactList = ({ contactList, handelDelet }) => {
 };
 
 ContactList.propTypes = {
-  contactList: PropTypes.func.isRequired,
+  contactList: PropTypes.array.isRequired,
   handelDelet: PropTypes.func.isRequired,
 };

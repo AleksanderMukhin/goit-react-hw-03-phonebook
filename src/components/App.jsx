@@ -50,7 +50,7 @@ export class App extends Component {
   handleFilterContact = () => {
     const { filter, contacts } = this.state;
     console.log(contacts);
-    if (filter === null) {
+    if (filter === null || filter === '') {
       return contacts;
     }
 
