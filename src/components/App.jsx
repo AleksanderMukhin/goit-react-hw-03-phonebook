@@ -84,8 +84,6 @@ export class App extends Component {
   }
 }
 
-// /contacts
-
 //  handleSubmitForm = contact => {
 //    console.log(contact);
 //    return this.state.contacts.some(cont => {
