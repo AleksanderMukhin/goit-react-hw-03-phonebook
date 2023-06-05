@@ -49,7 +49,7 @@ export class App extends Component {
 
   handleFilterContact = () => {
     const { filter, contacts } = this.state;
-
+    console.log(contacts);
     if (filter === null) {
       return contacts;
     }
@@ -60,6 +60,7 @@ export class App extends Component {
   };
 
   render() {
+    const contactList = this.handleFilterContact();
     return (
       <div
         style={{
@@ -77,10 +78,7 @@ export class App extends Component {
           handleFilterChange={this.handleFilterChange}
         />
 
-        <ContactList
-          contactList={this.handleFilterContact}
-          handelDelet={this.handelDelet}
-        />
+        <ContactList contactList={contactList} handelDelet={this.handelDelet} />
       </div>
     );
   }

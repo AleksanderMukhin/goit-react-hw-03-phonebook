@@ -2,12 +2,9 @@ import PropTypes from 'prop-types';
 import css from './ContactList.module.css';
 
 export const ContactList = ({ contactList, handelDelet }) => {
-  let cnts = contactList();
-  console.log(cnts);
-
   return (
     <ul>
-      {cnts.map(({ id, name, number }) => {
+      {contactList.map(({ id, name, number }) => {
         return (
           <li className={css.item} key={id}>
             <span className={css.item_name}>{name}:</span>
