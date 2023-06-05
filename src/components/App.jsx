@@ -18,7 +18,7 @@ export class App extends Component {
 
   componentDidMount() {
     const data = JSON.parse(localStorage.getItem('contacts'));
-    this.setState({ contacts: data ?? [] });
+    this.setState({ contacts: data ?? this.state.contacts });
   }
 
   componentDidUpdate(_, prevState) {
