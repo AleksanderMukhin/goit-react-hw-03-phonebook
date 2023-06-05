@@ -71,7 +71,7 @@ export class App extends Component {
           value={this.state.filter}
           handleFilterChange={this.handleFilterChange}
         />
-        {this.state.contacts && (
+        {this.state.contacts !== null && (
           <ContactList
             contactList={this.handleFilterContact}
             handelDelet={this.handelDelet}
