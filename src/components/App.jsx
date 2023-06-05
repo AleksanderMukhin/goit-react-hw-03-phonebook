@@ -28,12 +28,12 @@ export class App extends Component {
 
   handleSubmitForm = contact => {
     console.log(contact);
-    return this.state.contacts.some(contact => {
-      return contact.name.toLowerCase() === contact.name.toLowerCase();
+    return this.state.contacts.some(cont => {
+      return cont.name.toLowerCase() === contact.name.toLowerCase();
     })
       ? alert(`${contact.name} is already in contacts.`)
       : this.setState(prevState => ({
-          contacts: [...prevState.contacts, contact],
+          contacts: [contact, ...prevState.contacts],
         }));
   };
 
@@ -83,6 +83,8 @@ export class App extends Component {
     );
   }
 }
+
+// /contacts
 
 //  handleSubmitForm = contact => {
 //    console.log(contact);
