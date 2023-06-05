@@ -27,14 +27,19 @@ export class App extends Component {
   }
 
   handleSubmitForm = contact => {
-    console.log(contact);
-    return this.state.contacts.some(cont => {
-      return cont.name.toLowerCase() === contact.name.toLowerCase();
-    })
-      ? alert(`${contact.name} is already in contacts.`)
-      : this.setState(prevState => ({
-          contacts: [contact, ...prevState.contacts],
-        }));
+    const checkDuplicate = () => {
+      return this.state.contacts.some(cnt => {
+        return cnt.name.toLowerCase() === contact.name.toLowerCase();
+      });
+    };
+
+    if (checkDuplicate()) {
+      return alert(`${contact.name} is already in contacts.`);
+    } else {
+      this.setState(prevState => ({
+        contacts: [contact, ...prevState.contacts],
+      }));
+    }
   };
 
   handelDelet = id => {
