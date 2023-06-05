@@ -3,6 +3,11 @@ import css from './ContactList.module.css';
 
 export const ContactList = ({ contactList, handelDelet }) => {
   console.log(contactList);
+
+  if (!contactList || contactList.length === 0) {
+    return <p>No contacts available.</p>;
+  }
+
   return (
     <ul>
       {contactList.map(({ id, name, number }) => {
