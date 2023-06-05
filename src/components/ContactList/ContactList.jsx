@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import css from './ContactList.module.css';
 
 export const ContactList = ({ contactList, handelDelet }) => {
-  console.log(contactList);
+  // console.log(contactList);
 
   if (!contactList || contactList.length === 0) {
     return <p>No contacts available.</p>;
