@@ -27,6 +27,7 @@ export class App extends Component {
   }
 
   handleSubmitForm = contact => {
+    console.log(contact);
     return this.state.contacts.some(cont => {
       return cont.name.toLowerCase() === contact.name.toLowerCase();
     })
@@ -48,6 +49,10 @@ export class App extends Component {
 
   handleFilterContact = () => {
     const { filter, contacts } = this.state;
+
+    if (filter === null) {
+      return contacts;
+    }
 
     return contacts.filter(contact =>
       contact.name.toLowerCase().includes(filter.toLowerCase())
